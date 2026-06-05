@@ -32,9 +32,6 @@ export function usePulseAnimation(ref: React.RefObject<HTMLElement>) {
     });
   }, [ref]);
 }
-    });
-  }, [ref]);
-}
 
 export function usePulseAnimation(ref: React.RefObject<HTMLElement>) {
   useEffect(() => {
