@@ -19,16 +19,19 @@ export function useCinematicReveal(ref: React.RefObject<HTMLElement>) {
   }, [ref]);
 }
 
-export function useParticleGlow(ref: React.RefObject<HTMLElement>) {
+export function usePulseAnimation(ref: React.RefObject<HTMLElement>) {
   useEffect(() => {
     if (!ref.current) return;
+
     gsap.to(ref.current, {
-      boxShadow: [
-        "0 0 30px rgba(99,243,255,0.8)",
-      ],
-      duration: 3,
+      scale: 1.05,
+      duration: 1,
       repeat: -1,
+      yoyo: true,
       ease: "sine.inOut",
+    });
+  }, [ref]);
+}
     });
   }, [ref]);
 }
