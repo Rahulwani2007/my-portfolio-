@@ -24,9 +24,7 @@ export function useParticleGlow(ref: React.RefObject<HTMLElement>) {
     if (!ref.current) return;
     gsap.to(ref.current, {
       boxShadow: [
-        "0 0 10px rgba(99,243,255,0.3)",
         "0 0 30px rgba(99,243,255,0.8)",
-        "0 0 10px rgba(99,243,255,0.3)",
       ],
       duration: 3,
       repeat: -1,
