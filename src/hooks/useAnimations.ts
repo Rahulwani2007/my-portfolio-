@@ -33,18 +33,6 @@ export function usePulseAnimation(ref: React.RefObject<HTMLElement>) {
   }, [ref]);
 }
 
-export function usePulseAnimation(ref: React.RefObject<HTMLElement>) {
-  useEffect(() => {
-    if (!ref.current) return;
-    gsap.to(ref.current, {
-      scale: [1, 1.05, 1],
-      duration: 2,
-      repeat: -1,
-      ease: "sine.inOut",
-    });
-  }, [ref]);
-}
-
 export function useRippleEffect(ref: React.RefObject<HTMLElement>, trigger: boolean) {
   useEffect(() => {
     if (!ref.current || !trigger) return;
